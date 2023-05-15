@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) => Consumer<Auth>(
         builder: (context, auth, child) => MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: auth.isAuth ? HomePage() : LoginPage(),
+          home: auth.isAuth ? LandingPage() : LoginPage(),
           routes: 
             
           },
