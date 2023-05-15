@@ -7,7 +7,7 @@ import './providers/auth.dart';
 import './pages/landing_page.dart';
 import './pages/auth_page.dart';
 
-import './pages/edit_product_page.dart';
+// import './pages/edit_product_page.dart';
 
 void main() {
   runApp(MyApp());
