@@ -11,11 +11,11 @@ class Products with ChangeNotifier {
 
   void updateData(tokenData, uid) {
     token = tokenData;
-    userId = uid; 
+    userId = uid;
     notifyListeners();
   }
 
-  String urlMaster = "https://auth-61e1a-default-rtdb.firebaseio.com/";
+  String urlMaster = "https://pmobprak-default-rtdb.firebaseio.com/";
   List<Product> _allProduct = [];
 
   List<Product> get allProduct => _allProduct;
@@ -103,7 +103,8 @@ class Products with ChangeNotifier {
   }
 
   Future<void> inisialData() async {
-    Uri url = Uri.parse('$urlMaster/products.json?auth=$token&orderBy="userId"&equalTo="$userId"');
+    Uri url = Uri.parse(
+        '$urlMaster/products.json?auth=$token&orderBy="userId"&equalTo="$userId"');
 
     try {
       var response = await http.get(url);
